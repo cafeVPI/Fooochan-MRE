@@ -15,6 +15,7 @@ import comfy.model_management as model_management
 from modules.settings import default_settings
 from modules.resolutions import get_resolution_string, resolutions
 from modules.sdxl_styles import style_keys, fooocus_expansion, migrate_style_from_v1
+from modules.file_download import download_model_lora
 from collections.abc import Mapping
 from PIL import Image
 from comfy.cli_args import args
@@ -526,6 +527,7 @@ with shared.gradio_root:
                     depth_model = gr.Dropdown(label='Depth Model', choices=modules.path.depth_filenames, value=modules.path.default_controlnet_depth_name)
                 with gr.Row():
                     model_refresh = gr.Button(label='Refresh', value='\U0001f504 Refresh All Files', variant='secondary', elem_classes='refresh_button')
+                
 
                 canny_ctrls = [control_lora_canny, canny_edge_low, canny_edge_high, canny_start, canny_stop, canny_strength, canny_model]
                 depth_ctrls = [control_lora_depth, depth_start, depth_stop, depth_strength, depth_model]
@@ -572,6 +574,15 @@ with shared.gradio_root:
                     save_metadata_json = gr.Checkbox(label='Save Metadata in JSON', value=settings['save_metadata_json'])
                     save_metadata_image = gr.Checkbox(label='Save Metadata in Image', value=settings['save_metadata_image'])
                 metadata_viewer = gr.JSON(label='Metadata')
+
+            with gr.Tab(label='Downloader'):
+                tmodel = gr.Textbox(label="model urls", lines=5)
+                tlora = gr.Textbox(label="lora urls", lines=5)
+                db = gr.Button("Download")
+                noop = gr.Textbox()
+
+  
+                db.click(download_model_lora, inputs=[tmodel, tlora], outputs=noop)
 
         advanced_checkbox.change(lambda x: gr.update(visible=x), advanced_checkbox, advanced_column, queue=False)
 
