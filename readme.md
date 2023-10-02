@@ -71,6 +71,8 @@ Please open an issue if you use similar devices but still cannot achieve accepta
 | --- | --- |
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lllyasviel/Fooocus/blob/main/colab.ipynb) | Fooocus Colab (Official Version)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MoonRide303/Fooocus-MRE/blob/moonride-main/colab.ipynb) | Fooocus-MRE Colab (MoonRide Edition)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cafeVPI/Fooochan-MRE/blob/moonride-main/colab.ipynb) | Fooochan-MRE Colab (MoonRide Edition)
+
 
 Thanks to [camenduru](https://github.com/camenduru)!
 
