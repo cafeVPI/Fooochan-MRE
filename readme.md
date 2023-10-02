@@ -1,8 +1,8 @@
-# Fooocus-MRE
+# Fooochan-MRE 🌱🍒
 
 ![image](https://github.com/MoonRide303/Fooocus-MRE/assets/130458190/761197d3-149c-4267-b8ea-d1bc1c29d524)
 
-Fooocus-MRE is an image generating software (based on [Gradio](https://www.gradio.app/)), an enhanced variant of the [original Fooocus](https://github.com/lllyasviel/Fooocus) dedicated for a bit more advanced users.
+Fooochan-MRE is an image generating software (based on [Gradio](https://www.gradio.app/)), an enhanced variant of the [original Fooocus](https://github.com/lllyasviel/Fooocus) dedicated for a bit more advanced users.
 
 Fooocus-MRE is a rethinking of Stable Diffusion and Midjourney’s designs:
 
